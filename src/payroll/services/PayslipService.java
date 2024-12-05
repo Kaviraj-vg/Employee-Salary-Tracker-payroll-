@@ -13,14 +13,14 @@ public class PayslipService {
 
         if (!employeeExists(employeeId)) {
             System.out.println("Employee with ID " + employeeId + " does not exist.");
-            return;  // Stop further processing if employee doesn't exist
+            return;  
         }
 
 
-        double hra = basicPay * 0.20; // Example: 20% HRA
-        double da = basicPay * 0.10;  // Example: 10% DA
-        double otherAllowances = 3000; // Fixed allowance
-        double deductions = (basicPay + hra + da + otherAllowances) * 0.15; // 15% deductions
+        double hra = basicPay * 0.20; 
+        double da = basicPay * 0.10;  
+        double otherAllowances = 3000; 
+        double deductions = (basicPay + hra + da + otherAllowances) * 0.15; 
         double grossSalary = basicPay + hra + da + otherAllowances;
         double netSalary = grossSalary - deductions;
 
@@ -108,7 +108,7 @@ public class PayslipService {
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                return rs.getInt(1) > 0; // If count is greater than 0, employee exists
+                return rs.getInt(1) > 0; 
             }
         } catch (SQLException e) {
             e.printStackTrace();
