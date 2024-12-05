@@ -11,7 +11,7 @@ public class Payslip {
     private double grossSalary;
     private double netSalary;
 
-    // Constructor with all fields
+   
     public Payslip(int employeeId, String month, double basicPay, double hra, double da, 
                    double otherAllowances, double deductions, double grossSalary, double netSalary) {
         this.employeeId = employeeId;
@@ -25,7 +25,7 @@ public class Payslip {
         this.netSalary = netSalary;
     }
 
-    // Getters
+
     public int getEmployeeId() {
         return employeeId;
     }
