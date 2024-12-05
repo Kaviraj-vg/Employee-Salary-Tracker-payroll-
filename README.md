@@ -1,26 +1,34 @@
-# Employee-Salary-Tracker-payroll-
-A console-based application developed in Java, designed to manage employee data and payroll information. This project demonstrates core Java concepts, database integration, object-oriented programming principles and the use of data structures like HashMap for efficient in-memory operations.
+# Employee-Salary-Tracker (Payroll Management System)
+A console-based application developed in **Java**, designed to manage employee data and payroll information. This project demonstrates core **Java concepts**, **database integration**, **object-oriented programming principles**, and the use of data structures like **HashMap** for efficient in-memory operations.
 
-# Approach: HashMap + Database
-The application employs a hybrid approach that leverages both HashMap and database storage for efficient and reliable data management:
-1.On Program Startup:
-  Load data from the database into the HashMap for fast in-memory operations.
-2.During Execution:
-  Perform CRUD operations on the HashMap to ensure high-speed data manipulation.
-3.On Program Termination:
-  Synchronize the HashMap with the database to persist any new records or updates made during execution.
+---
 
-# Features
-Add, view, update, and delete employee records.
-Generate and view payslips for employees.
-Store and retrieve data using MySQL.
-Modular design with multiple classes and services for better maintainability.
-Dynamic payroll calculations including HRA, DA, and deductions.
+## Approach: HashMap + Database
+The application employs a hybrid approach that leverages both **HashMap** and **database storage** for efficient and reliable data management:  
+1. **On Program Startup**:  
+   - Load data from the database into the HashMap for fast in-memory operations.  
+2. **During Execution**:  
+   - Perform CRUD operations on the HashMap to ensure high-speed data manipulation.  
+3. **On Program Termination**:  
+   - Synchronize the HashMap with the database to persist any new records or updates made during execution.  
 
-# Technologies Used
-Java: Core programming language.
-MySQL: Database for storing employee and payslip details.
-JDBC: For database connectivity.
+---
+
+## Features
+- Add, view, update, and delete employee records.  
+- Generate and view payslips for employees.  
+- Store and retrieve data using **MySQL**.  
+- Modular design with multiple classes and services for better maintainability.  
+- Dynamic payroll calculations, including HRA, DA, and deductions.  
+
+---
+
+## Technologies Used
+- **Java**: Core programming language.  
+- **MySQL**: Database for storing employee and payslip details.  
+- **JDBC**: For database connectivity.  
+
+---
 
 # Setup Instructions
 Clone the repository.
