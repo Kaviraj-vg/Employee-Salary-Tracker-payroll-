@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         EmployeeService employeeService = new EmployeeService();
-        PayslipService payslipService = new PayslipService();  // Initialize PayslipService
+        PayslipService payslipService = new PayslipService();  
         Scanner scanner = new Scanner(System.in);
 
         // Load data from database into HashMap
@@ -30,17 +30,17 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    // Add employee code remains the same
+                   
                     System.out.print("Enter Employee ID: ");
                     int id = scanner.nextInt();
-                    scanner.nextLine(); // Consume newline
+                    scanner.nextLine(); 
                     System.out.print("Enter Name: ");
                     String name = scanner.nextLine();
                     System.out.print("Enter Position: ");
                     String position = scanner.nextLine();
                     System.out.print("Enter Salary: ");
                     double salary = scanner.nextDouble();
-                    scanner.nextLine(); // Consume newline
+                    scanner.nextLine(); 
                     System.out.print("Enter Department: ");
                     String department = scanner.nextLine();
 
@@ -52,7 +52,7 @@ public class Main {
                     break;
 
                 case 2:
-                    // View all employees code remains the same
+                    
                     System.out.println("\nAll Employees:");
                     for (Employee e : employeeService.getAllEmployees().values()) {
                         System.out.println(e);
@@ -60,7 +60,6 @@ public class Main {
                     break;
 
                 case 3:
-                    // Generate Payslip code remains the same
 
                     System.out.print("Enter Employee ID: ");
                     int empId = scanner.nextInt();
@@ -69,14 +68,13 @@ public class Main {
                     System.out.print("Enter Basic Pay: ");
                     double basicPay = scanner.nextDouble();
 
-                    // Call PayslipService to generate payslip
                     payslipService.generatePayslip(empId, month, basicPay);
                     employeeService.saveEmployeesToDB();
 
                     break;
 
                 case 4:
-                    // View Payslips
+                   
                     System.out.print("Enter Employee ID to view payslips: ");
                     int empIdToView = scanner.nextInt();
                     payslipService.viewPayslips(empIdToView);
@@ -95,7 +93,7 @@ public class Main {
                     break;
 
                 case 6:
-                    // Save data to DB and exit
+                  
                     employeeService.saveEmployeesToDB();
                     System.out.println("Data saved to database. Exiting...");
                     System.exit(0);
